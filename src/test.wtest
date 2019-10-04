@@ -1,0 +1,23 @@
+//TDD = test driven development = desarrollo guiado por la paabras
+
+import rodados.*
+import dependencias.*
+import pedidos.*
+
+describe "Flota de rodados" {
+	const cachito = new Corsa(color=rojo)
+	const pedido = new Pedidos(
+		distanciARecorrer = 950,
+		tiempoMaximo = 8,
+		cantidadPasajeros = 4,
+		coloresIncompatibles = #(azul,negro)
+	)
+	
+	test "velocidad requerida" {
+		assert.equals(120, pedidos.velocidadRequerida())
+	}
+	
+	test "cachito puede satisfacer" {
+		assert.that(pedidos.puedeSerSatisfecho(cachito))
+	}
+}

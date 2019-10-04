@@ -82,5 +82,6 @@ class Pedidos {
 	var property tiempoMax
 	var property cantidadPasajeros
 	var colores = []
-	method velocidadRequerida() {  }
+	method velocidadRequerida() {
+	}
 }
